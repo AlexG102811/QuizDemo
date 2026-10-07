@@ -12,6 +12,12 @@ header {
   text-align: center;
 }
 header h1 { color: #1e90ff; }
+header .tagline {
+  margin: 0.5rem 0 0;
+  font-size: 1.1rem;
+  color: #e0e0ff;
+  font-style: italic;
+}
 main { max-width: 600px; margin: 2rem auto; padding: 0 1rem; }
 #quiz {
   background: #fff;
