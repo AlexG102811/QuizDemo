@@ -8,4 +8,15 @@ A quiz demo application built with HTML, CSS, and JavaScript.
 - Clean, responsive card-based styling
 
 ## Getting Started
-Open `index.html` in your browser to play.
+
+### Run locally
+With Node.js 20 or later installed, run:
+
+```sh
+node server.js
+```
+
+Then open `http://localhost:5000`.
+
+### Run on Replit
+The Replit workflow starts the site automatically. Use the web preview to play.

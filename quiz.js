@@ -19,7 +19,8 @@ function showQuestion() {
   fEl.textContent = "";
   nextBtn.style.display = "none";
   const item = questions[current];
-  qEl.textContent = \`Question \${current + 1} of \${questions.length}: \${item.q}\`;
+  sEl.textContent = `Score: ${score} / ${questions.length}`;
+  qEl.textContent = `Question ${current + 1} of ${questions.length}: ${item.q}`;
   oEl.innerHTML = "";
   item.options.forEach((opt, i) => {
     const btn = document.createElement("button");
@@ -41,9 +42,9 @@ function pick(i, btn) {
   } else {
     btn.classList.add("wrong");
     buttons[item.answer].classList.add("correct");
-    fEl.textContent = \`Wrong! The answer is: \${item.options[item.answer]}\`;
+    fEl.textContent = `Wrong! The answer is: ${item.options[item.answer]}`;
   }
-  sEl.textContent = \`Score: \${score} / \${questions.length}\`;
+  sEl.textContent = `Score: ${score} / ${questions.length}`;
   nextBtn.style.display = "block";
 }
 
@@ -51,7 +52,7 @@ nextBtn.onclick = () => {
   current++;
   if (current < questions.length) showQuestion();
   else {
-    qEl.textContent = \`Quiz complete! Final score: \${score} / \${questions.length}\`;
+    qEl.textContent = `Quiz complete! Final score: ${score} / ${questions.length}`;
     oEl.innerHTML = "";
     fEl.textContent = "Refresh the page to try again.";
     nextBtn.style.display = "none";
